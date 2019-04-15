@@ -71,6 +71,20 @@ class YOLOLayer(nn.Module):
         pred_boxes[..., 3] = torch.exp(h.data) * anchor_h
 
 
-        
+        # Training 
+        if targets is not None:
+            if x.is_cuda:
+                self.mse_loss = self.mse_loss.cuda()
+                self.bce_loss = self.bce_loss.cuda()
+                self.ce_loss = self.ce_loss.cuda()
+
+            nGT, nCorrect, mask, conf_mask, tx, ty, tw, th, tconf, tcls = build_targets(
+                pred_boxes = pred_boxes.cpu().data,
+                pred_conf = pred_conf.cpu().data,
+                pred_cls = pred_cls.cpu().data,
+                target = target.cpu().data,
+                anchors = scaled_anchors.cpu().data,
+                
+            )        
       
         
