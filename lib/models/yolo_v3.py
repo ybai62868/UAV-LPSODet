@@ -6,6 +6,10 @@ import torch.nn.functional as F
 
 
 import numpy as np
+from utils.parse_config import *
+from utils.utils import build_targets
+from collections import defaultdict
+
 
 
 class EmptyLayer(nn.Module):
@@ -82,9 +86,24 @@ class YOLOLayer(nn.Module):
                 pred_boxes = pred_boxes.cpu().data,
                 pred_conf = pred_conf.cpu().data,
                 pred_cls = pred_cls.cpu().data,
-                target = target.cpu().data,
+                target = targets.cpu().data,
                 anchors = scaled_anchors.cpu().data,
-                
+                num_anchors = nA,
+                num_classes = self.num_classes,
+                grid_size = nG,
+                ignore_thres = self.ignore_thres,
+                img_dim = self.image_dim,
             )        
+
+        else:
+            output = torch.cat(
+                (
+                    pred_boxes.view(nB, -1, 4) * stride,
+                    pred_conf.view(nB, -1, 1),
+                    pred_cls.view(nB, -1, self.num_classes),
+                ),
+                -1
+            )
+            return output
       
         
