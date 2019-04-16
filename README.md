@@ -2,7 +2,8 @@
 
 ### 1. YOLOv3
 ### 2. SSD
-### 3. ThunderNet
+### 3. RetinaNet
+### 4. ThunderNet
 
 
 ---
