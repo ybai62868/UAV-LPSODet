@@ -3,8 +3,8 @@
 ### 1. YOLOv3
 ### 2. SSD
 ### 3. RetinaNet
-### 4. ThunderNet
-### 5. CustomNet
+### 4. CenterNet
+### 5. FCOS
 
 ---
 Code will be continued.
