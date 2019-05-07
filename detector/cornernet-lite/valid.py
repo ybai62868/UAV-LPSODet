@@ -93,7 +93,6 @@ def main():
     print ('the length of pred', len(res_rm))
 
     print (len(res_gt), len(res_rm))
-    step = 0
     for i in range(len(res_gt)):
         for j in range(len(res_rm)):
             if res_rm[j]['image_id'] == res_gt[i]['image_id']:
