@@ -2,9 +2,10 @@
 
 ### 1. YOLOv3
 ### 2. SSD
-### 3. RetinaNet
-### 4. CenterNet
-### 5. FCOS
+### 3. CornerNet-Lite
+### 4. RetinaNet
+### 5. CenterNet
+### 6. FCOS
 
 ---
 Code will be continued.
