@@ -1,4 +1,4 @@
-# UAV-LPSODetection
+# UAV-LPSODet
 ## Low power, Small Object Detection for Unmanned Aerial Vehicle
 
 ### 1. YOLOv3
