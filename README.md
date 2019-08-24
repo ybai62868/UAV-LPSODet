@@ -7,6 +7,6 @@
 ### 4. RetinaNet
 ### 5. CenterNet
 ### 6. FCOS
-Maybe other popular models will be added into this repo.
+Maybe other popular models will be added into this repo, it depends on how much spare time I have.
 ---
 Code will be continued.
