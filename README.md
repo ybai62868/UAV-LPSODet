@@ -1,7 +1,7 @@
 # UAV-LPSODet
 ## Low power, Small Object Detection for Unmanned Aerial Vehicle
 
-### 1. YOLOv3
+### 1. Small-YOLOv3
 ### 2. SSD
 ### 3. CornerNet-Lite
 ### 4. RetinaNet
